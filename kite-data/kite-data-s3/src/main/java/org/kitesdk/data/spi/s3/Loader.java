@@ -93,6 +93,10 @@ public class Loader implements Loadable {
         new URIPattern("s3a:/*path"),
         new URIPattern("s3a:/*path/:namespace/:dataset"),
         builder);
+    Registration.register(
+            new URIPattern("oss:/*path"),
+            new URIPattern("oss:/*path/:namespace/:dataset"),
+            builder);
   }
 
   private static URI fileSystemURI(Map<String, String> match) {
